@@ -7,6 +7,7 @@
   <ItemGroup>
     <PackageReference Include="DotLiquid" Version="2.0.333" />
     <PackageReference Include="Fermin.Text.Json.Converters" Version="1.0.5" />
+    <PackageReference Include="RazorEngine.NetCore" Version="2.2.6" />
     <PackageReference Include="System.Text.Json" Version="4.7.1" />
   </ItemGroup>
 

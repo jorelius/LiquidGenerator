@@ -12,18 +12,18 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
 
-    <AssemblyName>liquid</AssemblyName>
+    <AssemblyName>liquid.cli</AssemblyName>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>liquid</ToolCommandName>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <Authors>Jorel Fermin</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/jorelius/LiquidGenerator</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
-    <Product>Liquid</Product>
+    <Product>LiquidGenerator.Cli</Product>
     <Copyright>Jorel Fermin</Copyright>
-    <Description>Apply Liquid Template to datasource</Description>
+    <Description>Apply template (Liquid or Razor) to datasource</Description>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 

@@ -9,14 +9,14 @@ using Fermin.Text.Json.Converters;
 
 namespace LiquidGenerator.Core
 {
-    public class Generator
+    public class LiquidTemplateRenderer
     {
-        public Generator()
+        public LiquidTemplateRenderer()
         {
             
         }
 
-        public void Save(string templatePath, string jsonPath, string outputFile)
+        public static Template LoadLiquidTemplate(string templatePath)
         {
             if (!File.Exists(templatePath))
             {
@@ -24,24 +24,10 @@ namespace LiquidGenerator.Core
             }
 
             string templateText = File.ReadAllText(templatePath);
-            Template template = Template.Parse(templateText);
-
-            if (!File.Exists(jsonPath))
-            {
-                throw new ArgumentException($"Json file {jsonPath} does not exist!");
-            }
-
-            string json = File.ReadAllText(jsonPath);
-
-            var options = new JsonSerializerOptions().AddDynamicConverter();
-            ExpandoObject content = JsonSerializer.Deserialize<ExpandoObject>(json, options);
-
-            string liquifiedContent = Render(template, content);
-
-            File.WriteAllText(outputFile, liquifiedContent);
+            return Template.Parse(templateText);
         }
 
-        private string Render(Template template, ExpandoObject content)
+        public string Render(Template template, ExpandoObject content)
         {            
             return template.Render(Hash.FromDictionary(ConvertExpandoToDictionary(content)));
         }
