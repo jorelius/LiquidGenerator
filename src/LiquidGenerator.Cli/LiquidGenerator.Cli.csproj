@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\LiquidGenerator.Core\LiquidGenerator.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PowerArgs" Version="3.6.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <AssemblyName>liquid</AssemblyName>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>liquid</ToolCommandName>
+    <Version>0.0.1</Version>
+    <Authors>Jorel Fermin</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jorelius/LiquidGenerator</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <Product>Liquid</Product>
+    <Copyright>Jorel Fermin</Copyright>
+    <Description>Apply Liquid Template to datasource</Description>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+</Project>
